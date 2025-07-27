@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian Magang - Magang Mahasiswa D3 TI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/dashboard-common.css" rel="stylesheet">
+    <link href="../assets/css/penilaian-magang.css" rel="stylesheet">
+</head>
+<body data-page="penilaian-magang">
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+        <div id="header-container"></div>
+        
+        <div class="content-area">
+            <div class="main-container">
+                <div class="button-container">
+                    <button class="btn-kartu-penilaian" onclick="handleKartuPenilaian()">
+                        Kartu Penilaian Magang
+                    </button>
+                    
+                    <button class="btn-upload" onclick="handleUpload()">
+                        Upload
+                    </button>
+                </div>
+                
+                <div class="notice-section">
+                    <div class="notice-title">PERHATIAN!</div>
+                    <div class="notice-text">
+                        Form penilaian diisi oleh pembimbing lapangan di perusahaan setelah mahasiswa menyelesaikan magang.
+                    </div>
+                    <div class="notice-text">
+                        Silakan download form, berikan kepada pembimbing perusahaan, dan upload kembali setelah diisi lengkap.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="uploadModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Upload Penilaian Magang</h3>
+                <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <p class="upload-description">
+                    Upload form penilaian yang telah diisi oleh pembimbing lapangan. Maksimal 5 file dengan ukuran masing-masing 10MB.
+                </p>
+
+                <div class="drag-drop-area" id="dragDropArea">
+                    <div class="upload-icon">📄</div>
+                    <div class="upload-text">Drag your file(s) or browse</div>
+                    <div class="upload-subtext">Max 10 MB files are allowed</div>
+                    <div class="file-restrictions">Support .jpg, .png, .svg, .zip, .pdf, .doc, .docx files</div>
+                </div>
+
+                <input type="file" id="fileInput" class="file-input" multiple accept=".jpg,.jpeg,.png,.svg,.zip,.pdf,.doc,.docx">
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="url-upload-section">
+                    <h4>Upload from URL</h4>
+                    <div class="url-input-group">
+                        <input type="url" class="url-input" id="urlInput" placeholder="Add file URL">
+                        <button class="url-upload-btn" id="urlUploadBtn">Upload</button>
+                    </div>
+                </div>
+
+                <div class="uploaded-files" id="uploadedFiles">
+
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    Form penilaian berhasil diupload!
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                <button class="btn btn-primary" id="saveBtn" disabled>Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/dashboard-common.js"></script>
+    <script src="../assets/js/penilaian-magang.js"></script>
+</body>
+</html>

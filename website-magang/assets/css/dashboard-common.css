@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: #000000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+    border-right: 2px solid #444;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    overflow-y: auto;
+}
+
+.user-profile {
+    padding: 1.5rem;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.user-name {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.nav-menu {
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    border-top: 2px solid #444;
+    border-left: 2px solid #444;
+    border-bottom: 2px solid #444;
+}
+
+.nav-item:first-child {
+    border-top: 2px solid #444;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    color: #ff8c42;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background: #1a1a1a;
+    color: #ff8c42;
+}
+
+.nav-link.active {
+    background: #ff8c42;
+    color: #000000;
+    font-weight: 600;
+}
+
+.nav-link i {
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.main-content {
+    margin-left: 280px;
+    min-height: 100vh;
+    background: #000;
+    overflow-y: auto;
+    position: relative;
+}
+
+.header {
+    background: #000;
+    color: #ff8c42;
+    padding: 1rem 2rem 2rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-top: 2px solid #444;
+    border-right: 2px solid #444;
+    border-bottom: 2px solid #444;
+    position: relative;
+}
+
+.breadcrumb-section {
+    background: #e9ecef;
+    padding: 0.75rem 2rem;
+    border: 2px solid #444;
+    width: 92%;
+    position: relative;
+    margin: -20px auto 0 auto;
+    z-index: 20;
+}
+
+.breadcrumb-text {
+    color: #ff8c42;
+    font-size: 0.95rem;
+    margin: 0;
+    text-align: left;
+}
+
+.content-area {
+    padding: 2rem;
+    background: #000;
+    min-height: calc(100vh - 200px);
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}

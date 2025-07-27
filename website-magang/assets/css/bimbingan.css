@@ -1,0 +1,103 @@
+.section-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 1rem;
+    border: 2px solid #444;
+    border-radius: 0;
+    background: #1a1a1a;
+    width: fit-content;
+    margin: 1.5rem 0 2rem -2rem;
+    position: relative;
+    left: 0;
+}
+
+.file-selection-container {
+    max-width: 480px;
+    margin: 0 auto 0 1rem;
+    padding: 0 2rem;
+}
+
+.file-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.file-option-btn {
+    padding: 2rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    position: relative;
+}
+
+.file-option-btn .btn-text {
+    margin-bottom: 15px;
+}
+
+.file-option-btn .btn-underline {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+
+.file-option-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.btn-online {
+    background: #8B4513;
+}
+
+.btn-online:hover {
+    background: #A0522D;
+}
+
+.btn-offline {
+    background: #D2691E;
+}
+
+.btn-offline:hover {
+    background: #FF7F50;
+}
+
+.btn-logbook {
+    background: #ff8c42;
+}
+
+.btn-logbook:hover {
+    background: #ffab70;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        margin: 1rem 0 2rem -1rem;
+    }
+    
+    .file-selection-container {
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .file-option-btn {
+        padding: 1.5rem 1.5rem;
+        font-size: 1rem;
+        min-height: 100px;
+    }
+}

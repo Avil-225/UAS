@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    height: 100vh;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.left-panel {
+    background: url('../images/amikom.webp') center/cover;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+}
+
+.left-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.top-section {
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.9) 0%, rgba(255, 107, 26, 0.9) 100%);
+    padding: 2rem;
+    flex: 0 0 auto;
+    border-radius: 0 0 50px 0;
+    position: relative;
+    z-index: 3;
+}
+
+.middle-section {
+    flex: 1;
+    position: relative;
+    min-height: 300px;
+    background: transparent;
+}
+
+.bottom-section {
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.9) 0%, rgba(255, 107, 26, 0.9) 100%);
+    padding: 2rem;
+    flex: 0 0 auto;
+    border-radius: 50px 0 0 0;
+    position: relative;
+    z-index: 3;
+}
+
+.magang-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.university-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.university-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.right-panel {
+    background: white;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4285f4;
+    box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.forgot-link {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.btn-signin {
+    background: #4285f4;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    transition: background 0.3s ease;
+}
+
+.btn-signin:hover {
+    background: #3367d6;
+}
+
+.divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e9ecef;
+}
+
+.divider-text {
+    background: white;
+    padding: 0 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-google {
+    border: 2px solid #e9ecef;
+    background: white;
+    color: #333;
+    border-radius: 8px;
+    padding: 0.75rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-google:hover {
+    border-color: #ddd;
+    background: #f8f9fa;
+}
+
+.google-logo {
+    width: 18px;
+    height: 18px;
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.signup-link a {
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    .top-section, .bottom-section {
+        padding: 1.5rem;
+    }
+    
+    .magang-title {
+        font-size: 1.5rem;
+    }
+    
+    .university-name {
+        font-size: 1.3rem;
+    }
+    
+    .middle-section {
+        min-height: 200px;
+    }
+    
+    .right-panel {
+        padding: 2rem 1.5rem;
+    }
+}

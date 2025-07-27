@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Magang - Magang Mahasiswa D3 TI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/dashboard-common.css" rel="stylesheet">
+    <link href="../assets/css/laporan-magang.css" rel="stylesheet">
+</head>
+<body data-page="laporan-magang">
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+        <div id="header-container"></div>
+        
+        <div class="content-area">
+            <div class="status-container">
+                <div class="status-icon" id="statusIcon">
+                    <i class="fas fa-check" id="statusIconElement"></i>
+                </div>
+                <p class="status-text" id="statusText">Approved !</p>
+            </div>
+            
+            <button class="upload-button" onclick="handleUploadLogbook()">
+                Upload Logbook
+            </button>
+        </div>
+        
+        <div class="demo-controls">
+            <button onclick="setStatus('approved')" class="demo-btn">Set Approved</button>
+            <button onclick="setStatus('awaiting')" class="demo-btn">Set Awaiting</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/dashboard-common.js"></script>
+    <script src="../assets/js/laporan-magang.js"></script>
+
+<div id="uploadModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h3 class="modal-title">Media Upload</h3>
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <p class="upload-description">
+                Add your documents here, and you can upload up to 5 files max
+            </p>
+
+            <div class="drag-drop-area" id="dragDropArea">
+                <div class="upload-icon">📄</div>
+                <div class="upload-text">Drag your file(s) or browse</div>
+                <div class="upload-subtext">Max 10 MB files are allowed</div>
+                <div class="file-restrictions">Only support .jpg, .png and .svg and zip files</div>
+            </div>
+
+            <input type="file" id="fileInput" class="file-input" multiple accept=".jpg,.jpeg,.png,.svg,.zip,.pdf,.doc,.docx">
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <div class="url-upload-section">
+                <h4>Upload from URL</h4>
+                <div class="url-input-group">
+                    <input type="url" class="url-input" id="urlInput" placeholder="Add file URL">
+                    <button class="url-upload-btn" id="urlUploadBtn">Upload</button>
+                </div>
+            </div>
+
+            <div class="uploaded-files" id="uploadedFiles">
+
+            </div>
+
+            <div class="success-message" id="successMessage">
+                Files uploaded successfully!
+            </div>
+        </div>
+
+        <div class="modal-actions">
+            <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+            <button class="btn btn-primary" id="saveBtn" disabled>Save</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

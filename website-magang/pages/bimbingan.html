@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimbingan - Magang Mahasiswa D3 TI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/dashboard-common.css" rel="stylesheet">
+    <link href="../assets/css/bimbingan.css" rel="stylesheet">
+</head>
+<body data-page="bimbingan">
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+        <div id="header-container"></div>
+        
+        <div class="content-area">
+            <div class="section-title">
+                Silahkan Pilih File
+            </div>
+            
+            <div class="file-selection-container">
+                <div class="file-options">
+                    <button class="file-option-btn btn-online" onclick="handleFileSelection('online')">
+                        <span class="btn-text">Kartu Bimbingan Magang Online</span>
+                        <div class="btn-underline"></div>
+                    </button>
+                    
+                    <button class="file-option-btn btn-offline" onclick="handleFileSelection('offline')">
+                        <span class="btn-text">Kartu Bimbingan Magang Offline</span>
+                        <div class="btn-underline"></div>
+                    </button>
+                    
+                    <button class="file-option-btn btn-logbook" onclick="handleFileSelection('logbook')">
+                        <span class="btn-text">Logbook Magang</span>
+                        <div class="btn-underline"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/dashboard-common.js"></script>
+    <script src="../assets/js/bimbingan.js"></script>
+</body>
+</html>
